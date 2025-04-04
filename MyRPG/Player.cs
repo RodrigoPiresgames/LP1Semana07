@@ -17,6 +17,7 @@ namespace MyRPG
         {
             Name = name;
             health = MaxHealth;
+            xp = 0;
         }
 
         public int XP
@@ -37,9 +38,9 @@ namespace MyRPG
                 else if ( value >= MaxHealth)
                     health = MaxHealth;
                 else
-                    health = value
+                    health = value;
             }
         }
-        
+
     }
  }
