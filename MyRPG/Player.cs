@@ -22,7 +22,11 @@ namespace MyRPG
         public int XP
         {
             get => xp;
-            set => xp = xp + value;
+            set
+            {
+                if (XPCheck(value))
+                    xp = xp + value;
+            }
         }
 
         public int Level => 1 + (XP / 1000);
@@ -46,6 +50,14 @@ namespace MyRPG
         {
             this.Health = Health - damage;
             this.XP = (int)damage / 20;
+        }
+
+        private bool XPCheck(int newXP)
+        {
+            if (newXP < XP)
+                return false;
+            else
+                return true;
         }
 
     }
