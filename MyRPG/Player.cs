@@ -22,7 +22,7 @@ namespace MyRPG
         public int XP
         {
             get => xp;
-            set => xp = value;
+            set => xp = xp + value;
         }
 
         public int Level => 1 + (XP / 1000);
@@ -35,7 +35,7 @@ namespace MyRPG
             {
                 if (value <= 0 )
                     health = 0;
-                else if ( value >= MaxHealth)
+                else if ( value > MaxHealth)
                     health = MaxHealth;
                 else
                     health = value;

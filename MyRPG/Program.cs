@@ -19,6 +19,7 @@ namespace MyRPG
             Console.WriteLine($"MaxHealth: {player.MaxHealth}"); // MaxHealth: 140
 
             player.TakeDamage(45);
+
             Console.WriteLine($"Health: {player.Health}/{player.MaxHealth}"); // Health: 55/140
             Console.WriteLine($"XP: {player.XP}");          // XP: 2502
             Console.WriteLine($"Level: {player.Level}");    // Level: 3
