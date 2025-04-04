@@ -5,8 +5,8 @@ using System.Threading.Tasks;
  
 namespace ColorSpheres
 {
-     public class Color
-     {
+    public class Color
+    {
          private byte red;
          private byte green;
          private byte blue;
@@ -38,5 +38,5 @@ namespace ColorSpheres
          {
              return (byte)((red+green+blue)/3);
          }
-     }
+    }
 }
