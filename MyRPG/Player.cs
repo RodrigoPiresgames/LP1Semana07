@@ -24,7 +24,7 @@ namespace MyRPG
             get => xp;
             set
             {
-                if (XPCheck(value))
+                //if (XPCheck(value))
                     xp = xp + value;
             }
         }
