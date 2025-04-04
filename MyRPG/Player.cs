@@ -9,7 +9,6 @@ namespace MyRPG
     {
         private int xp;
         private float health;
-        private readonly float MaxHealth;
  
         public string Name {get;}
 
@@ -27,6 +26,7 @@ namespace MyRPG
         }
 
         public int Level => 1 + (XP / 1000);
+        public float MaxHealth => 100 + (Level - 1) * 20;
 
         public float Health
         {
@@ -40,6 +40,12 @@ namespace MyRPG
                 else
                     health = value;
             }
+        }
+
+        public void TakeDamage (float damage)
+        {
+            this.Health = Health - damage;
+            this.XP = (int)damage / 20;
         }
 
     }
